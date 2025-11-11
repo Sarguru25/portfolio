@@ -35,17 +35,17 @@ const Skills = () => {
   return (
     <section id="skills" className="main-card">
       <div className="max-w-6xl mx-auto">
-              <h1 className="main-h1">My Skills!</h1>
+              <h1 className="text-sm uppercase tracking-[0.4em] text-neutral-400 mb-6">My Skills!</h1>
 
-                <h2 className="main-h2">
-                  Language and Tool That  <span className='main-h2-span'>Power My Work</span>
+                <h2 className="text-4xl font-semibold text-white sm:text-4xl mb-10">
+                  Language and Tool That  <span className='text-transparent pr-2 bg-clip-text bg-linear-to-r from-lime-300 via-lime-200 to-amber-300 lg:text-5xl italic'>Power My Work</span>
                 </h2>
 
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 w-full max-w-[1600px] mx-auto">
+        <div className="flex flex-wrap justify-center gap-8 px-5 w-full max-w-[1600px] mx-auto">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="cursor-target w-20 h-20 sm:w-32 sm:h-32 md:w-36 md:h-36 bg-white/5 backdrop-blur-md  rounded-[8px] shadow-xl flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105"
+              className="cursor-target w-20 h-20 sm:w-32 sm:h-32 md:w-36 md:h-36 bg-white/5 backdrop-blur-md mb-3 rounded-[8px] shadow-xl flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105"
             >
               <img
                 src={skill.icon}

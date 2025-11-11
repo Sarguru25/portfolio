@@ -85,68 +85,18 @@
 }
 
 /* Glass morphism utility */
-/* Glass effect */
 .glass {
-  background: rgba(30, 30, 45, 0.7);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
 }
 
 .dark .glass {
-  background: rgba(20, 20, 30, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-/* Card styles */
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--card-shadow);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: var(--card-hover-shadow);
-  transform: translateY(-2px);
-}
-
-/* Button styles */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--radius);
-  font-weight: 500;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: var(--btn-primary-bg);
-  color: var(--primary-foreground);
-  border: none;
-}
-
-.btn-primary:hover {
-  background: var(--btn-primary-hover);
-  transform: translateY(-1px);
-}
-
-.btn-secondary {
-  background: var(--btn-secondary-bg);
-  color: var(--secondary-foreground);
-  border: 1px solid var(--border);
-}
-
-.btn-secondary:hover {
-  background: var(--btn-secondary-hover);
-  transform: translateY(-1px);
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 html {
@@ -164,60 +114,36 @@ body {
 
 /* Light theme */
 :root {
-  /* Base colors */
-  --background: rgb(10, 10, 20);
-  --foreground: rgb(255, 255, 255);
-  
-  /* Card styles */
-  --card: rgba(30, 30, 45, 0.7);
-  --card-foreground: rgb(255, 255, 255);
-  --popover: rgba(30, 30, 45, 0.8);
-  --popover-foreground: rgb(255, 255, 255);
-  
-  /* Primary color - Teal */
-  --primary: rgb(20, 184, 166);
-  --primary-foreground: rgb(255, 255, 255);
-  
-  /* Secondary color - Purple */
-  --secondary: rgba(167, 139, 250, 0.15);
-  --secondary-foreground: rgb(196, 181, 253);
-  
-  /* Muted/Subtle colors */
-  --muted: rgba(45, 45, 60, 0.5);
-  --muted-foreground: rgba(255, 255, 255, 0.7);
-  
-  /* Accent colors - Purple */
-  --accent: rgba(167, 139, 250, 0.2);
-  --accent-foreground: rgb(220, 210, 255);
-  
-  /* Destructive/Error */
+  /* --background: rgb(248, 250, 252);
+  --foreground: rgb(30, 41, 59);
+  --card: rgb(255, 255, 255);
+  --card-foreground: rgb(15, 23, 42);
+  --popover: rgb(255, 255, 255);
+  --popover-foreground: rgb(15, 23, 42);
+  --primary: rgb(67, 56, 202);
+  --primary-foreground: rgb(248, 250, 252);
+  --secondary: rgb(224, 231, 255);
+  --secondary-foreground: rgb(55, 48, 163);
+  --muted: rgb(241, 245, 249);
+  --muted-foreground: rgb(100, 116, 139);
+  --accent: rgb(224, 231, 255);
+  --accent-foreground: rgb(55, 48, 163);
   --destructive: rgb(239, 68, 68);
+  --border: rgb(226, 232, 240);
+  --input: rgb(226, 232, 240);
+  --ring: rgb(129, 140, 248);
+  --radius: 0.5rem; */
   
-  /* UI Elements */
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.1);
-  --ring: rgb(167, 139, 250);
-  --radius: 0.5rem;
-  
-  /* Updated gradients for dark mode */
-  --gradient-1: radial-gradient(1000px 600px at 60% 30%, rgba(20, 184, 166, 0.1), transparent 70%);
-  --gradient-2: radial-gradient(800px 400px at 20% 70%, rgba(99, 102, 241, 0.1), transparent 60%);
-  --gradient-3: radial-gradient(1000px 600px at 90% 90%, rgba(167, 139, 250, 0.1), transparent 70%);
-  --gradient-4: radial-gradient(1200px 800px at 50% 120%, rgba(99, 102, 241, 0.05), rgba(10, 10, 20, 0.95));
-  
-  /* Card styles */
-  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
-  --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  
-  /* Button styles */
-  --btn-primary-bg: var(--primary);
-  --btn-primary-hover: rgb(13, 148, 136);
-  --btn-secondary-bg: var(--secondary);
-  --btn-secondary-hover: rgba(167, 139, 250, 0.25);
+  /* Enhanced gradients for light mode */
+  --gradient-1: radial-gradient(1000px 600px at 60% 30%, rgba(40, 21, 245, 0.547), transparent 90%);
+  --gradient-2: radial-gradient(800px 400px at 20% 70%, rgb(91, 255, 41), transparent 60%);
+  --gradient-3: radial-gradient(1000px 600px at 90% 90%, rgba(49, 157, 172, 0.05), transparent 70%);
+  --gradient-4: radial-gradient(1200px 800px at 50% 120%, rgba(99, 102, 241, 0.03), rgba(255, 255, 255, 0.95));
 }
 
 /* Dark theme */
 .dark {
+  /* --background: rgb(11, 12, 16);
   --foreground: rgb(248, 250, 252);
   --card: rgb(30, 41, 59);
   --card-foreground: rgb(248, 250, 252);
@@ -234,12 +160,12 @@ body {
   --destructive: rgb(127, 29, 29);
   --border: rgb(30, 41, 59);
   --input: rgb(30, 41, 59);
-  --ring: rgb(148, 163, 184);
+  --ring: rgb(148, 163, 184); */
   
   /* Custom gradients for dark mode */
-  --gradient-1: radial-gradient(1000px 600px at 60% 30%, rgba(54, 9, 77, 1), transparent 70%);
+  --gradient-1: radial-gradient(1000px 600px at 60% 30%, rgb(54, 9, 77), transparent 70%);
   --gradient-2: radial-gradient(800px 400px at 20% 70%, rgba(4, 44, 72, 0.9), transparent 60%);
-  --gradient-3: radial-gradient(1000px 600px at 90% 90%, rgba(8, 20, 112, 1), transparent 70%);
+  --gradient-3: radial-gradient(1000px 600px at 90% 90%, rgb(8, 20, 112), transparent 70%);
   --gradient-4: radial-gradient(1200px 800px at 50% 120%, rgba(5, 26, 109, 0.5), rgba(0, 0, 0, 0.95));
 }
 
@@ -404,7 +330,7 @@ body::-webkit-scrollbar {
     @apply bg-background text-foreground;
   }
 }
- 
+
 .main-card {
   @apply relative mx-auto w-full max-w-6xl pb-20 pt-10 px-4 sm:px-6 lg:px-8;
 }

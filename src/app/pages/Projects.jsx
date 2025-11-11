@@ -2,11 +2,11 @@
 
 import React, { useEffect, useRef, useState, useCallback } from 'react'
 // Image paths from public directory
-const project1 = '/project-1.png';
-const project2 = '/project-2.png';
-const project3 = '/project-3.png';
-const project4 = '/project-4.png';
-const project5 = '/project-5.png';
+const project1 = '/timetable.png';
+const project2 = '/resume.png';
+const project3 = '/portfolio.png';
+const project4 = '/food.png';
+const project5 = '/photographer.png';
 
 import Link from 'next/link'
 
@@ -18,10 +18,10 @@ const cards = [
     tags: ['MERN', 'Python', 'Optimization'],
   },
   {
-    title: 'KPRBot',
-    desc: 'Student assistant chatbot using Python',
+    title: 'Resume Builder',
+    desc: 'Resume builder with MERN stack',
     img: project2,
-    tags: ['HTML', 'CSS', 'JS', 'Python'],
+    tags: ['React.js', 'Node.js', 'MongoDB'],
   },
   {
     title: 'Portfolio Website',
@@ -46,7 +46,7 @@ const cards = [
 
 
 const ProjectCard = React.memo(({ title, desc, img, tags, isDragging = false }) => (
-  <div className={`relative w-64 h-80 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md shadow-[0_25px_60px_rgba(0,0,0,0.45)] overflow-hidden transition-all duration-300 hover:shadow-[0_40px_90px_rgba(0,0,0,0.55)] p-4 ${
+  <div className={`cursor-target relative w-64 h-80 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md  overflow-hidden transition-all duration-300 hover:shadow-[0_40px_90px_rgba(0,0,0,0.55)] p-4 ${
     isDragging ? 'scale-105 rotate-0 shadow-2xl' : 'hover:scale-105'
   }`}>
     {/* Image with gradient overlay */}
@@ -69,7 +69,7 @@ const ProjectCard = React.memo(({ title, desc, img, tags, isDragging = false }) 
         {tags.map((tag, index) => (
           <span 
             key={index}
-            className="px-2 py-1 text-xs bg-white/10 text-white/80 rounded-full border border-white/5"
+            className="cursor-target px-2 py-1 text-xs bg-white/10 text-white/80 rounded-full border border-white/5"
           >
             {tag}
           </span>
@@ -181,7 +181,7 @@ const Projects = () => {
   }, [])
 
   return (
-    <section id="projects" className="flex relative w-full py-16 md:py-24 lg:py-32">
+    <section id="projects" className="main-card">
       <div
         className="relative mx-auto w-full rounded-3xl px-4 py-12 md:px-8 md:py-16 lg:px-12 lg:py-20"
         // style={{
@@ -207,15 +207,17 @@ const Projects = () => {
         <div className="relative mx-auto max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
-            <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Featured Projects
-            </h2>
+              <h1 className="main-h1">My Projects!</h1>
+
+                <h2 className="main-h2">
+                  Let’s Have a Look at <span className='main-h2-span'>My Few Projects</span>
+                </h2>
             
             {/* Reset Layout Button - Desktop only */}
             {!isMobile && (
               <button
                 onClick={resetLayout}
-                className="mt-6 px-6 py-2 text-sm text-white/80 border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                className="cursor-target mt-6 px-6 py-2 text-sm text-white/80 border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105"
               >
                 Reset Layout
               </button>
@@ -261,19 +263,19 @@ const Projects = () => {
             </div>
             
             {/* Carousel Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
+            {/* <div className="flex justify-center gap-2 mt-6">
               {cards.map((_, i) => (
                 <div 
                   key={i}
                   className="w-2 h-2 rounded-full bg-white/30 transition-all duration-300"
                 />
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* CTA Section */}
           <div className="text-">
-            <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 transform">
+            <button className="cursor-target px-8 py-3 bg-gradient-to-r from-lime-100 to-lime-300  text-gray-900 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xlfont-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 transform">
               <Link href="/projects">View All Projects</Link>
             </button>
           </div>

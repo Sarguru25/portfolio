@@ -28,17 +28,17 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="mt-[2rem] pointer-events-auto max-w-[460px] mx-auto ">
-      <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-4">
-        <div className="flex w-full flex-col items-center gap-3 md:hidden">
-          <div className="z-[200] flex w-full items-center justify-between rounded-full border border-white/10 bg-neutral-900/60 backdrop-blur-2xl shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+    <nav className="sticky -top-4 left-0 right-0 z-50 pointer-events-auto w-full max-w-[460px] -mb-10 mx-auto">
+      <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-4 py-4 px-4">
+        <div className="flex w-full max-w-[460px] flex-col items-center gap-3 md:hidden">
+          <div className="z-[200] flex w-[80vw] max-w-[460px] items-center justify-between rounded-full border border-white/10 bg-neutral-900/60 backdrop-blur-2xl shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
             <div className="flex items-center gap-3">
               <img
                 src="/profile.png"
                 alt="Profile avatar"
-                className="h-12 w-12 rounded-full border border-white/10 object-cover "
+                className="h-12 w-12 rounded-full border border-white/10 object-cover"
               />
-              <div className="flex flex-col w-[120px] text-left">
+              <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2">
                   <span className="text-lg font-bold text-white">SARGURU D</span>
                 </div>
@@ -73,14 +73,14 @@ const Navbar = () => {
           )}
           </div>
           <div
-            className={`absolute w-[460px] pt-[40px] rounded-3xl border border-white/10 bg-neutral-900/70 px-6 py-5 text-center backdrop-blur-2xl shadow-[0_20px_45px_rgba(0,0,0,0.4)] z-[100] transition-all duration-300 ease-out origin-top transform ${
+            className={`absolute w-[80vw] max-w-[460px] pt-[40px] rounded-3xl border border-white/10 bg-neutral-900/70 px-6 py-5 text-center backdrop-blur-2xl shadow-[0_20px_45px_rgba(0,0,0,0.4)] z-[100] transition-all duration-300 ease-out origin-top transform ${
               isMenuOpen
                 ? 'pointer-events-auto opacity-100 translate-y-0 scale-y-100'
                 : 'pointer-events-none opacity-0 -translate-y-2 scale-y-95'
             }`}
             aria-hidden={!isMenuOpen}
           >
-            <div className="flex flex-col items-center gap-4 text-lg font-medium text-neutral-200 pt-4 ">
+            <div className="flex flex-col items-center gap-4 text-lg font-medium text-neutral-200 pt-4">
               {navLinks.map(({ label, href }) => (
                 <a
                   key={label}
@@ -118,7 +118,7 @@ const Navbar = () => {
           </div>
           <a
             href="#contact"
-            className="rounded-full flex h-9 w-24 items-center justify-center bg-white text-base font-semibold text-neutral-900 shadow-[inset_0_2px_6px_rgba(255,255,255,0.4)] transition hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 text-center align-center transform -translate-x-[6px]"
+            className="cursor-target rounded-full flex h-9 w-24 items-center justify-center bg-white text-base font-semibold text-neutral-900 shadow-[inset_0_2px_6px_rgba(255,255,255,0.4)] transition hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 text-center align-center transform -translate-x-[6px]"
           >
             Contact
           </a>
