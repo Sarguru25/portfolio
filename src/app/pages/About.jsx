@@ -1,8 +1,7 @@
-// import React from 'react';
+
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
-// import ShinyText from '@/app/components/ShinyText';
 import ScrambledText from '@/app/components/ScrambledText';
-import Folder from '@/app/components/Folder';
+
 const About = () => {
   return (
     <div id="about" className="main-card">

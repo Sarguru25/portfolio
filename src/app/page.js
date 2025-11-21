@@ -1,12 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { FaHome, FaUser, FaCog, FaMoon, FaSun } from 'react-icons/fa';
+import { useEffect } from 'react'
 import particlesConfig from './particles-config'
 import TargetCursor from './components/TargetCursor'
 import Noise from './components/Noise'
 import Navbar from './components/Navbar'
-import Dock from './components/Dock'
 import Hero from './pages/Hero'
 import About from './pages/About'
 import Skills from './pages/Skills'
@@ -60,62 +58,9 @@ export default function Home() {
     }
   }, [])
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // Initialize theme from localStorage or system preference
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-      document.documentElement.classList.add('dark');
-      setIsDarkMode(true);
-    } else {
-      document.documentElement.classList.remove('dark');
-      setIsDarkMode(false);
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setIsDarkMode(false);
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      setIsDarkMode(true);
-    }
-  };
-
-  const items = [
-    { 
-      icon: <FaHome size={18} />, 
-      label: 'Home', 
-      onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }) 
-    },
-    { 
-      icon: isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />, 
-      label: isDarkMode ? 'Light Mode' : 'Dark Mode', 
-      onClick: toggleDarkMode 
-    },
-    { 
-      icon: <FaUser size={18} />, 
-      label: 'Profile', 
-      onClick: () => {
-        const contactSection = document.getElementById('contact');
-        contactSection?.scrollIntoView({ behavior: 'smooth' });
-      } 
-    },
-    { 
-      icon: <FaCog size={18} />, 
-      label: 'Settings', 
-      onClick: () => alert('Settings coming soon!') 
-    },
-  ];
-
   return (
     <div className="app-wrapper relative">
+
       <div className="fixed inset-0 -z-10">
         <Noise
           patternSize={250}
@@ -139,18 +84,8 @@ export default function Home() {
           <About />
           <Skills />
           <Projects />
-          <Dock
-            items={items}
-            panelHeight={60}
-            baseItemSize={50}
-            magnification={60}
-            orientation="vertical"
-            className="right-4"
-          />
           <Contact />
           <Footer />
-
-
         </div>
       </main>
     </div>
