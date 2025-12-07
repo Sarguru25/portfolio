@@ -1,14 +1,8 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
 import { FaFilePdf, FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
-
-const LaptopModel = dynamic(
-  () => import('../components/LaptopModel'),
-  { ssr: false }
-);
 
 const Hero = () => {
   return (
