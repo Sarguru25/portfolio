@@ -8,6 +8,8 @@ const ContactMessageSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
+
+
 // Avoid model overwrite on hot reload in development
 export default mongoose.models.ContactMessage ||
   mongoose.model("ContactMessage", ContactMessageSchema);

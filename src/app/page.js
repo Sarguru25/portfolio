@@ -62,22 +62,23 @@ export default function Home() {
     <div className="app-wrapper relative">
 
       <div className="fixed inset-0 -z-10">
-        <Noise
+        {/* <Noise
           patternSize={250}
           patternScaleX={1}
           patternScaleY={1}
           patternRefreshInterval={2}
           patternAlpha={15}
-        />
+          /> */}
       </div>
 
       <TargetCursor
         spinDuration={2}
         hideDefaultCursor={true}
         parallaxOn={true}
-      />
+        />
       <div id="particles-js" className="-z-10" />
       <main className="app-content relative">
+
         <Navbar />
         <div className="pt-24 px-0">
           <Hero />
@@ -87,6 +88,7 @@ export default function Home() {
           <Contact />
           <Footer />
         </div>
+
       </main>
     </div>
   )

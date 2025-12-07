@@ -22,12 +22,12 @@ const projects = [
     title: 'Timetable Generator',
     desc: 'A timetable generator for schools and colleges using the MERN stack, with Python optimization algorithms for efficient scheduling.',
     img: '/timetable.png',
-    tags: ['MERN', 'Python', 'MongoDB', 'Node.js', 'React'],
+    tags: ['React.js', 'MongoDB', 'Node.js', 'Express', 'Python'],
     features: [
       'Automated timetable generation using optimization algorithms',
       'User-friendly admin panel to manage classes, teachers, and rooms',
-      'Dynamic timetable updates and conflict resolution',
-      'Responsive interface for both students and faculty',
+      // 'Dynamic timetable updates and conflict resolution',
+      // 'Responsive interface for both students and faculty',
     ],
     liveUrl: '#',
     githubUrl: 'https://github.com/Sarguru25/timetable',
@@ -50,7 +50,7 @@ const projects = [
     title: 'Portfolio Website',
     desc: 'A modern and responsive personal portfolio website developed using Next.js to showcase skills, projects, and contact information.',
     img: '/portfolio.png',
-    tags: ['Next.js', 'React', 'Tailwind CSS'],
+    tags: ['Next.js', 'Particles.js', 'Tailwind CSS' , 'Particles.js'],
     features: [
       'Responsive and mobile-first design',
       'Showcases personal projects and skills',
@@ -64,7 +64,7 @@ const projects = [
     title: 'Food Ordering App',
     desc: 'A full-stack food ordering application built with the MERN stack, featuring user authentication and cart functionality.',
     img: '/food.png',
-    tags: ['MERN', 'MongoDB', 'Express', 'React', 'Node.js'],
+    tags: ['React.js', 'MongoDB', 'Express', 'Node.js'],
     features: [
       'User authentication and profile management',
       'Add, remove, and manage items in cart',
@@ -78,7 +78,7 @@ const projects = [
     title: 'Photographer Portfolio Website',
     desc: 'A responsive portfolio website designed for photographers, built using React.js to showcase photography work beautifully.',
     img: '/photographer.png',
-    tags: ['React', 'JavaScript', 'CSS', 'HTML'],
+    tags: ['React.js', 'CSS',],
     features: [
       'Responsive gallery layout for showcasing photos',
       'Lightbox view for images',
@@ -92,7 +92,7 @@ const projects = [
     title: 'Resume Builder',
     desc: 'A resume builder application built with the MERN stack and AI integration to generate professional resumes.',
     img: '/resume.png',
-    tags: ['MERN', 'React', 'Node.js', 'MongoDB', 'Python'],
+    tags: ['React.js', 'Node.js', 'MongoDB', 'Express', 'Gemini API'],
     features: [
       'AI-powered resume content suggestions',
       'Multiple templates for resumes',
@@ -184,7 +184,7 @@ const ProjectCard = ({ project, index }) => {
             <FiGithub className="mr-2 group-hover/github:scale-110 transition-transform duration-300" /> 
             <span className="group-hover/github:translate-x-1 transition-transform duration-300">Code</span>
           </a>
-          <a 
+          {/* <a 
             href={project.liveUrl} 
             target="_blank" 
             rel="noopener noreferrer"
@@ -192,7 +192,7 @@ const ProjectCard = ({ project, index }) => {
           >
             <span className="group-hover/live:translate-x-1 transition-transform duration-300">Live Demo</span>
             <FiExternalLink className="ml-2 group-hover/live:scale-110 transition-transform duration-300" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
@@ -238,9 +238,9 @@ const ProjectsPage = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
             My Projects
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+         {/* <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
             Here are some of my recent projects. Each one was built to solve real-world problems and improve my skills.
-          </p>
+          </p>*/}
         </div>
         
         {/* Filter Tabs */}

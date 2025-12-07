@@ -182,13 +182,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="main-card">
-      <div
-        className="relative mx-auto w-full rounded-3xl px-4 py-12 md:px-8 md:py-16 lg:px-12 lg:py-20"
-        // style={{
-        //   backgroundImage:
-        //     'radial-gradient(1200px 800px at 10% 10%, rgba(125, 58, 180, 0.35), transparent 60%), radial-gradient(900px 600px at 85% 20%, rgba(6, 40, 90, 0.45), transparent 65%), linear-gradient(180deg, rgba(18,16,34,0.9), rgba(9,12,23,0.95))',
-        // }}
-      >
+
         {/* Animated background pattern */}
         <div
           className="pointer-events-none absolute inset-10 rounded-3xl opacity-50"
@@ -280,7 +274,7 @@ const Projects = () => {
             </button>
           </div>
         </div>
-      </div>
+    
 
       {/* Add CSS animation for background */}
       <style jsx>{`
