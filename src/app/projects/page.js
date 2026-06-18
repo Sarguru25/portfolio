@@ -332,7 +332,7 @@ const ProjectsPage = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-3 mb-12">
           {allTags.map(tag => (
             <button
               key={tag}
@@ -345,7 +345,7 @@ const ProjectsPage = () => {
               {tag.charAt(0).toUpperCase() + tag.slice(1)}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -64,10 +64,14 @@ const About = () => {
                   Who is <span className="main-h2-span">Sarguru?</span>
                 </h2>
 
-                <p className="text-gray-300 leading-8 tracking-wider">
+                {/* <p className="text-gray-300 leading-8 tracking-wider">
                   Full Stack Developer skilled in React, Node.js, Next.js, Tailwind, and MongoDB.
                   Built projects including a MERN timetable app, resume builder, and 3D portfolio.
                   Seeking freelance work and full-time roles to grow and create impact.
+                </p> */}
+                 <p className="text-gray-300 leading-8 tracking-wider">
+                  Full Stack Developer skilled in React, Node.js, Next.js, Tailwind, and MongoDB. Passionate about building modern web applications, solving real-world problems, and creating clean user experiences. Open to freelance opportunities and full-time roles to learn, grow, and make an impact.
+
                 </p>
 
                 <div className="flex flex-wrap justify-center mt-8 gap-4">

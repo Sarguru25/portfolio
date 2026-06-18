@@ -72,24 +72,12 @@ const Case = () => {
     <section id="cases" className="main-card py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div className="mb-16 md:text-center lg:text-left">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-sm font-semibold tracking-widest text-lime-400 uppercase mb-4"
-          >
-            Featured Work
-          </motion.h2>
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight"
-          >
-            Real problems. <br className="hidden lg:block" />
-            <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-lime-200 to-amber-200">Scalable solutions.</span>
-          </motion.h3>
+        <div className="mb-16 text-center">
+          <h1 className="main-h1">Problem Solved!</h1>
+
+          <h2 className="main-h2">
+            Real Business Challenges into <span className='main-h2-span'>Digital Solutions</span>
+          </h2>
         </div>
 
         <motion.div
@@ -160,7 +148,7 @@ const Case = () => {
                         <h5 className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-2">Technology Used</h5>
                         <div className="flex gap-2 flex-wrap">
                           {study.technology?.map((techImg, i) => (
-                            <div key={i} className="w-8 h-8 md:w-10 md:h-10 md:mx-2 rounded bg-gray-600 flex items-center justify-center p-1.5 border border-white/10 hover:bg-white/10 transition-colors">
+                            <div key={i} className="cursor-target w-8 h-8 md:w-10 md:h-10 md:mx-2 rounded bg-gray-600 flex items-center justify-center p-1.5 border border-white/10 hover:bg-white/10 transition-colors">
                               <img src={techImg} alt="Tech" className="w-full h-full object-contain opacity-80 hover:opacity-100 transition-opacity" />
                             </div>
                           ))}
