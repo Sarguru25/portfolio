@@ -37,7 +37,7 @@ const Hero = () => {
                 className="cursor-target p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex-shrink-0"
               >
                 <FaLinkedin className="w-7 h-7" />
-              </a>    
+              </a>
               <a
                 href="https://www.instagram.com/_sarguru._/"
                 target="_blank"

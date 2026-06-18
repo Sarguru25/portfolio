@@ -1,0 +1,92 @@
+# Featured Case Studies
+
+## Access Control & Cost Optimization for Zoho Books
+
+### Problem
+
+The organization needed to provide financial visibility to multiple team members, but expanding user access inside Zoho Books increased licensing costs and created permission management challenges.
+
+### Solution
+
+Built a custom internal web platform integrated with Zoho Books APIs that acts as a controlled access layer. Employees can securely access only the required financial information without requiring additional direct Zoho Books user licenses.
+
+### What I Built
+
+* Secure API integration with Zoho Books
+* Role-based access control
+* Centralized dashboard for finance operations
+* Controlled data exposure based on user permissions
+
+### Outcome
+
+Reduced dependency on additional Zoho Books seats while improving accessibility and operational efficiency.
+
+## HRMS Platform for Attendance, Payroll & Employee Operations
+
+### Problem
+
+Managing employee attendance, payroll, check-in/check-out, leave tracking, and HR operations manually was time-consuming and expensive compared to subscription-based HR tools.
+
+### Solution
+
+Developed a complete HRMS platform to digitize employee operations and reduce recurring software dependency.
+
+### What I Built
+
+* Employee check-in / check-out system
+* Attendance tracking
+* Payroll generation
+* Automated payslip generation and email delivery
+* Leave management workflow
+* Employee dashboard and HR admin panel
+
+### Outcome
+
+Simplified HR operations, reduced manual work, and centralized employee management into one platform.
+
+## Interactive 3D Product Visualization Experience
+
+### Problem
+
+Customers struggled to understand the actual appearance of products from static images, leading to repeated calls to management requesting additional photos and clarifications.
+
+### Solution
+
+Built an immersive 3D web experience that allows customers to explore products interactively before making decisions.
+
+### What I Built
+
+* Realistic 3D product rendering
+* Interactive rotate / zoom controls
+* Responsive experience across devices
+* Optimized asset loading for performance
+
+### Tech
+
+Next.js · React Three Fiber · Three.js
+
+### Outcome
+
+Reduced repetitive customer inquiries and improved product understanding through self-service visualization.
+
+## Automated Quotation Generation System
+
+### Problem
+
+Creating quotations manually consumed time and introduced formatting inconsistencies and operational delays.
+
+### Solution
+
+Built a quotation generation platform that automates quotation creation and standardizes business workflows.
+
+### What I Built
+
+* Dynamic quotation generation
+* Customer and product management
+* Automated calculations
+* Export and sharing workflows
+* Admin management dashboard
+
+### Outcome
+
+Reduced quotation preparation time and improved process consistency across teams.

@@ -282,4 +282,3 @@ body::-webkit-scrollbar {
 .main-h2-span{
   @apply text-transparent pr-2 bg-clip-text bg-linear-to-r from-lime-300 via-lime-200 to-amber-300 lg:text-5xl italic;
 }
-

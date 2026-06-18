@@ -12,7 +12,8 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Footer from './pages/Footer'
 import { IconCloudDemo } from './components/Demo'
-
+import Testimonial from './pages/Testimonial'
+import Case from './pages/Case'
 export default function Home() {
   const [introVisible, setIntroVisible] = useState(true)
   const [mainVisible, setMainVisible] = useState(false)
@@ -82,24 +83,22 @@ export default function Home() {
     <>
       {/* INTRO */}
       <div
-        className={`fixed inset-0 z-50 flex items-center justify-center bg-transparent transition-opacity duration-300 ${
-          introVisible
+        className={`fixed inset-0 z-50 flex items-center justify-center bg-transparent transition-opacity duration-300 ${introVisible
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
-        }`}
+          }`}
       >
         <IconCloudDemo />
       </div>
 
       {/* MAIN APP */}
       <div
-        className={`app-wrapper relative transition-opacity duration-700 ${
-          mainVisible ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`app-wrapper relative transition-opacity duration-700 ${mainVisible ? 'opacity-100' : 'opacity-0'
+          }`}
       >
-        <div className="fixed inset-0 -z-10">
-          {/* <Noise />  */}
-        </div>
+        {/* <div className="fixed inset-0 -z-10">
+          <Noise /> 
+        </div> */}
 
         <TargetCursor
           spinDuration={2}
@@ -115,7 +114,9 @@ export default function Home() {
             <Hero />
             <About />
             <Skills />
+            <Case />
             <Projects />
+            {/* <Testimonial /> */}
             <Contact />
             <Footer />
           </div>

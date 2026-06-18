@@ -5,50 +5,52 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
-  { name: 'HTML', icon: '/html.svg' },
-  { name: 'CSS', icon: '/css.svg' },
-  { name: 'JavaScript', icon: '/javascript.svg' },
-  { name: 'React', icon: '/react.svg' },
-  { name: 'Tailwind CSS', icon: '/tailwind.svg' },
-  { name: 'Figma', icon: '/figma.svg' },
-  { name: 'Node.js', icon: '/node.svg' },
-  { name: 'Express', icon: '/express.svg', invert: true },
-  { name: 'MongoDB', icon: '/mongodb.svg' },
-  { name: 'Git', icon: '/git.svg' },
-  { name: 'GitHub', icon: '/github.svg', invert: true },
-  { name: 'Material-UI', icon: '/mui.svg' },
-  { name: 'Postman', icon: '/postman.svg' },
-  { name: 'Next.js', icon: '/next.svg' },
+  { name: 'HTML', icon: '/skills/html.svg' },
+  { name: 'CSS', icon: '/skills/css.svg' },
+  { name: 'JavaScript', icon: '/skills/javascript.svg' },
+  { name: 'React', icon: '/skills/react.svg' },
+  { name: 'Tailwind CSS', icon: '/skills/tailwind.svg' },
+  { name: 'Figma', icon: '/skills/figma.svg' },
+  { name: 'Node.js', icon: '/skills/node.svg' },
+  { name: 'Express', icon: '/skills/express.svg', invert: true },
+  { name: 'MongoDB', icon: '/skills/mongodb.svg' },
+  { name: 'Git', icon: '/skills/git.svg' },
+  { name: 'GitHub', icon: '/skills/github.svg', invert: true },
+  { name: 'Material-UI', icon: '/skills/mui.svg' },
+  { name: 'Postman', icon: '/skills/postman.svg' },
+  { name: 'Next.js', icon: '/skills/next.svg' },
+  { name: 'Typescript', icon: '/skills/typescript.svg' },
+  { name: 'Three.js', icon: '/skills/three.svg' },
 ];
 
 const Skills = () => {
   const cardsRef = useRef([]);
 
-useEffect(() => {
-  const ctx = gsap.context(() => {
-    gsap.set('.skills-grid', { perspective: 1000 });
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.set('.skills-grid', { perspective: 1000 });
 
-    gsap.fromTo(
-      cardsRef.current,
-      { opacity: 0, y: 40, z: -120 },
-      {
-        opacity: 1,
-        y: 0,
-        z: 0,
-        duration: 0.8,
-        ease: 'power3.out',
-        stagger: { each: 0.07, grid: 'auto', from: 'start' },
-        scrollTrigger: {
-          trigger: '.skills-grid',
-          start: 'top 80%',
-          once: true,
-        },
-      }
-    );
-  });
+      gsap.fromTo(
+        cardsRef.current,
+        { opacity: 0, y: 40, z: -120 },
+        {
+          opacity: 1,
+          y: 0,
+          z: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          stagger: { each: 0.07, grid: 'auto', from: 'start' },
+          scrollTrigger: {
+            trigger: '.skills-grid',
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+    });
 
-  return () => ctx.revert();
-}, []);
+    return () => ctx.revert();
+  }, []);
 
 
   return (
@@ -70,9 +72,8 @@ useEffect(() => {
               <img
                 src={skill.icon}
                 alt={skill.name}
-                className={`w-8 h-8 sm:w-14 sm:h-14 md:w-16 md:h-16 ${
-                  skill.invert ? 'invert' : ''
-                }`}
+                className={`w-8 h-8 sm:w-14 sm:h-14 md:w-16 md:h-16 ${skill.invert ? 'invert' : ''
+                  }`}
               />
               <p className="mt-2 text-xs sm:text-sm text-white">
                 {skill.name}
