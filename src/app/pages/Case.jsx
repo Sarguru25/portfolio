@@ -53,7 +53,7 @@ const caseStudies = [
 {
   icon: FiShoppingCart,
   tag: "E-COMMERCE & ORDER AUTOMATION",
-  title: "Try Fruits – B2B Dry Fruits Platform",
+  title: "Dry Fruits",
   problem: "Managing bulk dry-fruit enquiries, quantity-based pricing, quotations, inventory, and customer orders manually made the sales process time-consuming and difficult to manage efficiently.",
   solution: "Built a B2B e-commerce and quotation platform that automates product pricing, quotation generation, order workflows, inventory synchronization, PDF catalog creation, and WhatsApp-based customer communication through an integrated digital workflow.",
   technology: [
