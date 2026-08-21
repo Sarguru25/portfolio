@@ -20,7 +20,11 @@ const skills = [
   { name: 'Postman', icon: '/skills/postman.svg' },
   { name: 'Next.js', icon: '/skills/next.svg' },
   { name: 'Typescript', icon: '/skills/typescript.svg' },
-  { name: 'Three.js', icon: '/skills/three.svg' },
+  { name: 'Three.js', icon: '/skills/three.svg'  },
+  { name: 'PostgreSQL', icon: '/skills/postgresql.svg' },
+  { name: 'prisma', icon: '/skills/prisma.svg'},
+  // { name: 'Fastify', icon: '/skills/fastify2.svg' , invert: true},
+  // { name: 'NestJS', icon: '/skills/nestjs.svg'},
 ];
 
 const Skills = () => {

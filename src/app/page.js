@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import particlesConfig from './particles-config'
 import TargetCursor from './components/TargetCursor'
-import Noise from './components/Noise'
+// import Noise from './components/Noise'
 import Navbar from './components/Navbar'
 import Hero from './pages/Hero'
 import About from './pages/About'
@@ -12,7 +12,6 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Footer from './pages/Footer'
 import { IconCloudDemo } from './components/Demo'
-import Testimonial from './pages/Testimonial'
 import Case from './pages/Case'
 export default function Home() {
   const [introVisible, setIntroVisible] = useState(true)
@@ -116,7 +115,6 @@ export default function Home() {
             <Skills />
             <Case />
             <Projects />
-            {/* <Testimonial /> */}
             <Contact />
             <Footer />
           </div>

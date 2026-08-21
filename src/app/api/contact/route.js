@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { connectDB } from "../../../lib/mongodb";
-import ContactMessage from "../../../models/ContactMessage";
+import nodemailer from "nodemailer";
 
 // Helper function to add CORS headers
 function withCors(response) {
@@ -17,41 +16,53 @@ export async function OPTIONS() {
 
 // POST request
 export async function POST(request) {
-  const { name, email, subject, message } = await request.json();
-
-  if (!name || !email || !message) {
-    return withCors(
-      NextResponse.json({ message: "Missing required fields" }, { status: 400 })
-    );
-  }
-
   try {
-    await connectDB();
-    const newMessage = await ContactMessage.create({ name, email, subject, message });
+    const { name, email, subject, message } = await request.json();
+
+    if (!name || !email || !message) {
+      return withCors(
+        NextResponse.json({ message: "Missing required fields" }, { status: 400 })
+      );
+    }
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: 'sargurudurai25@gmail.com',
+      replyTo: email,
+      subject: `New Contact Form Submission: ${subject || 'No Subject'}`,
+      text: `
+        Name: ${name}
+        Email: ${email}
+        Subject: ${subject}
+        Message: ${message}
+      `,
+      html: `
+        <h3>New Contact Form Submission</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `
+    };
+
+    await transporter.sendMail(mailOptions);
+
     return withCors(
-      NextResponse.json({ success: true, data: newMessage }, { status: 201 })
+      NextResponse.json({ success: true, message: "Email sent successfully" }, { status: 200 })
     );
   } catch (error) {
-    console.error("Error saving message:", error);
+    console.error("Error sending email:", error);
     return withCors(
-      NextResponse.json({ success: false, message: "Server error" }, { status: 500 })
-    );
-  }
-}
-
-// GET request
-export async function GET() {
-  try {
-    await connectDB();
-    const messages = await ContactMessage.find().sort({ createdAt: -1 });
-
-    return withCors(
-      NextResponse.json({ success: true, data: messages }, { status: 200 })
-    );
-  } catch (error) {
-    console.error("Error fetching messages:", error);
-    return withCors(
-      NextResponse.json({ success: false, message: "Server error" }, { status: 500 })
+      NextResponse.json({ success: false, message: "Failed to send email" }, { status: 500 })
     );
   }
 }

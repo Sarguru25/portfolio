@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiDatabase, FiUsers, FiCrosshair, FiFileText } from 'react-icons/fi';
+import { FiDatabase, FiUsers, FiCrosshair, FiShoppingCart } from 'react-icons/fi';
 
 const caseStudies = [
   {
@@ -50,21 +50,21 @@ const caseStudies = [
     outcome: "Improved understanding & reduced inquiries",
     image: "/case/case-3.png"
   },
-  {
-    icon: FiFileText,
-    tag: "WORKFLOW AUTOMATION",
-    title: "Quotation Maker",
-    problem: "Quotation preparation was handled manually, creating delays, repetitive work, and inconsistent document generation across the sales process.",
-    solution: "Built an automated quotation generation system that creates professional quotations instantly through configurable business rules and workflows.",
-    technology: [
-      "/skills/next.svg",
-      "/skills/tailwind.svg",
-      "/skills/typescript.svg",
-      "/skills/mongodb.svg"
-    ],
-    outcome: "Faster quotation creation & consistent process",
-    image: "/case/case-4.png"
-  }
+{
+  icon: FiShoppingCart,
+  tag: "E-COMMERCE & ORDER AUTOMATION",
+  title: "Try Fruits – B2B Dry Fruits Platform",
+  problem: "Managing bulk dry-fruit enquiries, quantity-based pricing, quotations, inventory, and customer orders manually made the sales process time-consuming and difficult to manage efficiently.",
+  solution: "Built a B2B e-commerce and quotation platform that automates product pricing, quotation generation, order workflows, inventory synchronization, PDF catalog creation, and WhatsApp-based customer communication through an integrated digital workflow.",
+  technology: [
+    "/skills/next.svg",
+    "/skills/typescript.svg",
+    "/skills/node.svg",
+    "/skills/postgresql.svg",
+  ],
+  outcome: "Streamlined B2B sales operations & automated quotation-to-order workflow",
+  image: "/case/case-4.png"
+}
 ];
 
 const Case = () => {
